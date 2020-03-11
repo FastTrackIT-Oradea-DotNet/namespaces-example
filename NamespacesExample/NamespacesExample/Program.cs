@@ -1,6 +1,11 @@
 ﻿using twoD = NamespacesExample.TwoD;
 using threeD = NamespacesExample.ThreeD;
 
+public class Point
+{
+    public string Description;
+}
+
 namespace NamespacesExample
 {
     class Program
@@ -16,16 +21,8 @@ namespace NamespacesExample
             point3D.Y = 200;
             point3D.Z = 300;
 
-            // alternatively, you can use
-            twoD.Point otherPoint2D = new twoD.Point();
-            otherPoint2D.X = 100;
-            otherPoint2D.Y = 200;
-
-            threeD.Point otherPoint3D = new threeD.Point();
-            otherPoint3D.X = 100;
-            otherPoint3D.Y = 200;
-            otherPoint3D.Z = 300;
-
+            global::Point pointGlobal = new global::Point();
+            pointGlobal.Description = "Something";
         }
     }
 }
